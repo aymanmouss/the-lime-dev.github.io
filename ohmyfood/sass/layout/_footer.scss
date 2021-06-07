@@ -1,0 +1,30 @@
+.footer {
+  padding: 1.3rem;
+  background-color: $footer-color;
+  color: $white-color;
+  .container--footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0 auto;
+    max-width: 1280px;
+  }
+
+  &__logo {
+    margin-bottom: 1rem;
+    font-family: "Shrikhand", cursive;
+  }
+  &__menu {
+    list-style: none;
+    &__list {
+      margin-bottom: 0.5rem;
+      &--icon,
+      &--icon--sm {
+        margin-right: 0.5rem;
+      }
+      &--icon--sm {
+        font-size: 0.7rem;
+      }
+    }
+  }
+}
