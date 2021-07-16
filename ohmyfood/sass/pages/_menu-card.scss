@@ -1,0 +1,186 @@
+.header {
+  &--link {
+    position: relative;
+  }
+  &__link-icon {
+    position: absolute;
+    left: 1rem;
+    font-size: 1.3rem;
+    @media (max-width: 299px) {
+      display: none;
+    }
+  }
+}
+
+.Restaurant-image {
+  width: 100%;
+  height: 60vh;
+  background-size: cover;
+  object-fit: cover;
+  background-position: center;
+}
+.Restaurant-image.la-palette-du-gout {
+  background-image: url("../../public/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+}
+.Restaurant-image.le-delice-des-sens {
+  background-image: url("../../public/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+}
+.Restaurant-image.a-la-francaise {
+  background-image: url("../../public/img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+}
+.Restaurant-image.la-note-enchantee {
+  background-image: url("../../public/img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+}
+
+.menu {
+  max-width: 80rem;
+  margin: 0 auto;
+  background-color: $success-color-light;
+
+  border-radius: 40px 40px 0 0;
+  // transform: translate(0, -80px);
+  margin-top: -40px;
+
+  padding-bottom: 10px;
+  &__title {
+    font-family: "Shrikhand", cursive;
+    font-size: 1.4rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 2rem 1.5rem 0 1.5rem;
+  }
+  .sections {
+    @media (min-width: 1146px) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &__section {
+    margin-top: 2rem;
+    &__title {
+      margin: 0 1.5rem;
+      position: relative;
+      padding-bottom: 0.3rem;
+    }
+    &__title::after {
+      content: "";
+      width: 3rem;
+      height: 0.25rem;
+      background-color: $tertiaire-color;
+      position: absolute;
+      left: -25px;
+      bottom: 0;
+      margin: 0 1.5rem;
+    }
+
+    .menuItem {
+      background-color: white;
+      // padding: 1rem;
+      border-radius: 15px;
+      margin: 1rem;
+      box-shadow: 0 3px 0.4rem $shadow-color-light;
+      display: flex;
+      animation: itemAppear 0.6s;
+      animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+      animation-fill-mode: both;
+      transform: scale(0);
+      @media (min-width: 1146px) {
+        width: 350px;
+      }
+      &__content {
+        display: flex;
+        width: 100%;
+        padding: 1rem;
+        position: relative;
+        &__header {
+          width: 100%;
+          &__title {
+            margin-bottom: 0.3rem;
+            font-weight: bold;
+            white-space: nowrap;
+            // to create the Dots
+            text-overflow: ellipsis;
+            // to remove the hidden
+            overflow: hidden;
+          }
+          &__description {
+            display: flex;
+            justify-content: space-between;
+          }
+          &__text {
+            // remove text wrap
+            white-space: nowrap;
+            // to create the Dots
+            text-overflow: ellipsis;
+            // to remove the hidden
+            overflow: hidden;
+            margin-right: 10px;
+            font-size: 0.9rem;
+          }
+        }
+        &:hover {
+          overflow: hidden;
+        }
+        &__price {
+          display: flex;
+          justify-content: flex-end;
+          align-items: flex-end;
+          // position: absolute;
+          // right: 18px;
+          // bottom: 15px;
+          // display: block;
+        }
+      }
+      &__confirmation {
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: all 400ms;
+        width: 0rem;
+
+        .select-container {
+          height: 100%;
+          width: 100%;
+          overflow: hidden;
+          background-color: $tertiaire-color;
+          color: white;
+          border-radius: 0 15px 15px 0;
+          overflow: hidden;
+          position: relative;
+          display: block;
+          .fa-check {
+            position: absolute;
+            color: $tertiaire-color;
+            background-color: white;
+            border-radius: 100px;
+            padding: 0.2rem;
+            font-size: 1rem;
+            top: 50%;
+            left: 50%;
+            transform: translate(50%, -50%) rotate(90deg);
+          }
+        }
+      }
+      &:hover .menuItem__confirmation {
+        width: 6rem;
+        transform: scaleX(1);
+
+        i {
+          transform: translate(-50%, -50%) rotate(360deg);
+          transition: transform 400ms ease-in-out;
+        }
+      }
+    }
+  }
+}
+.submit-section {
+  text-align: center;
+  margin: 4rem 0;
+  .btn--large {
+    padding: 1rem 2.5rem;
+  }
+}
+// .container--footer.footer--width {
+//   max-width: 70rem;
+// }

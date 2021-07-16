@@ -1,0 +1,19 @@
+.btn {
+  background-image: linear-gradient(0deg, $primary-color, $secondaire-color);
+  color: $white-color;
+  border: none;
+  padding: 1rem;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 3px 0.4rem #c3c3c3;
+}
+.btn:hover {
+  background-image: linear-gradient(
+    0deg,
+    lighten($primary-color, 5%),
+    lighten($secondaire-color, 5%)
+  );
+  box-shadow: 0 5px 0.6rem #bdbdbd;
+}

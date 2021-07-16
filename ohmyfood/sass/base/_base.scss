@@ -1,0 +1,26 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  &:visited,
+  &:active,
+  &:hover {
+    color: inherit;
+  }
+}
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+body {
+  min-width: 235px;
+}
+.fa-heart {
+  font-size: 1.7rem;
+}
